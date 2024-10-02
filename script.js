@@ -1,4 +1,4 @@
-const version = "v333";
+
 
 // install service worker
 if ('serviceWorker' in navigator) {
