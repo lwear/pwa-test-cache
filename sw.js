@@ -1,13 +1,12 @@
-const version = "v335";
+const version = "v336";
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('my-cache').then(function(cache) {
       return cache.addAll([
         '/',
-        'index.html',
-        'style.css',
-        'script.js'
+        'pwa-test/index.html'
+      
        
       ]);
     })
