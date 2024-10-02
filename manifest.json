@@ -2,39 +2,39 @@
   "name": "Ms Wears PWA",
   "short_name": "MsWear",
   "description": "A test PWA for 2024",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "pwa-test/",
+  "scope": "pwa-test/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/icons/horse-192-192.png",
+      "src": "pwa-test/icons/horse-192-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/horse-512-512.png",
+      "src": "pwa-test/icons/horse-512-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/icons/horse-48-48.png",
+      "src": "pwa-test/icons/horse-48-48.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "/icons/horse-72-72.png",
+      "src": "pwa-test/icons/horse-72-72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/icons/horse-96-96.png",
+      "src": "pwa-test/icons/horse-96-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/icons/horse-144-144.png",
+      "src": "pwa-test/icons/horse-144-144.png",
       "sizes": "144x144",
       "type": "image/png"
     }    
