@@ -1,13 +1,10 @@
-const version = "v337";
+const version = "v338";
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('my-cache').then(function(cache) {
       return cache.addAll([
-        '/',
-        'index.html'
-      
-       
+        '/'       
       ]);
     })
   );
