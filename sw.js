@@ -1,4 +1,4 @@
-const version = "v334";
+const version = "v335";
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
@@ -7,13 +7,8 @@ self.addEventListener('install', function(event) {
         '/',
         'index.html',
         'style.css',
-        'script.js',
-        'icons/horse-192-192.png',
-        'icons/horse-48-48.png',
-        'icons/horse-72-72.png',
-        'icons/horse-96-96.png',
-        'icons/horse-144-144.png',
-        'icons/horse-512-512.png'
+        'script.js'
+       
       ]);
     })
   );
