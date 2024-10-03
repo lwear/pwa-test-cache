@@ -1,3 +1,9 @@
 body {
-  background-color:pink;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+#joke-container {
+  margin-top: 20px;
+  font-size: 1.2em;
 }
