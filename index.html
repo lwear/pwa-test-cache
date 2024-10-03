@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   
-    <link rel="manifest" href="manifest.json">
-   
-    <title>Hello World!</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="/manifest.json">
+  <title>Joke PWA</title>
+</head>
+<body>
+  <h1>Joke PWA</h1>
+  <p>Click the button to get a random joke:</p>
+  <button id="joke-btn">Get Joke</button>
+  <div id="joke-container"></div>
+  <button id="clear-cache">Clear Dynamic Cache</button>
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- The website JavaScript file -->
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-   <h1>
-     Sample PWA
-    </h1>
-
-    <button id="installButton" style="display: none;">Install App</button>
-  </body>
+  <script src="app.js"></script>
+</body>
 </html>
