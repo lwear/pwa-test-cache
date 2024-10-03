@@ -1,3 +1,5 @@
+window.onload = function () {
+
 // prompt the user to install your PWA
 let deferredPrompt;
 
@@ -34,6 +36,8 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
+}; // window.onload
 
 // Fetch a joke from the JokeAPI
 function fetchJoke() {
