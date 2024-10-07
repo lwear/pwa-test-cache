@@ -1,3 +1,4 @@
+const API_URL = "https://v2.jokeapi.dev/joke/Any?safe-mode";
 window.onload = function () {
 
 // prompt the user to install your PWA
@@ -43,7 +44,7 @@ if ('serviceWorker' in navigator) {
 function fetchJoke() {
   const jokeContainer = document.getElementById('joke-container');
   
-  fetch('https://v2.jokeapi.dev/joke/Any')
+  fetch(API_URL)
     .then(response => response.json())
     .then(joke => {
       // If the joke has both a setup and delivery, display both
