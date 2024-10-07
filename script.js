@@ -1,6 +1,4 @@
-const API_URL = "https://v2.jokeapi.dev/joke/Any?safe-mode";
-
-
+const API_URL = "https://v2.jokeapi.dev/joke/Programming?safe-mode";
 
 window.onload = function () {
 
