@@ -1,9 +1,13 @@
 const API_URL = "https://v2.jokeapi.dev/joke/Any?safe-mode";
+
+
+
 window.onload = function () {
 
 // prompt the user to install your PWA
 let deferredPrompt;
 
+// make it installable  
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPrompt = e;
@@ -25,7 +29,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 
-
+// register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js')
@@ -38,6 +42,16 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Set up the button to fetch a new joke on click
+document.getElementById('joke-btn').addEventListener('click', fetchJoke);
+
+// Clear dynamic cache when button is clicked
+document.getElementById('clear-cache').addEventListener('click', () => {
+  caches.delete('my-app-dynamic-cache-v1').then(() => {
+    alert('Dynamic cache cleared!');
+  });
+});
+
 }; // window.onload
 
 // Fetch a joke from the JokeAPI
@@ -47,6 +61,7 @@ function fetchJoke() {
   fetch(API_URL)
     .then(response => response.json())
     .then(joke => {
+      
       // If the joke has both a setup and delivery, display both
       if (joke.type === 'twopart') {
         jokeContainer.innerHTML = `<p>${joke.setup}</p><p><strong>${joke.delivery}</strong></p>`;
@@ -59,15 +74,7 @@ function fetchJoke() {
       jokeContainer.innerHTML = `<p>Failed to fetch a joke. Please try again later.</p>`;
       console.log('Error fetching joke:', error);
     });
-}
+} // fetchJoke
 
-// Set up the button to fetch a new joke on click
-document.getElementById('joke-btn').addEventListener('click', fetchJoke);
 
-// Clear dynamic cache when button is clicked
-document.getElementById('clear-cache').addEventListener('click', () => {
-  caches.delete('my-app-dynamic-cache-v1').then(() => {
-    alert('Dynamic cache cleared!');
-  });
-});
 
